@@ -17,6 +17,10 @@ Create a Flutter application with:
 3.  Install dependencies: `flutter pub get`
 4.  Run the app: `flutter run`
 
+## Download apk
+
+Apk link- https://github.com/AdharshPS/smbs_machine_test/releases/download/v1.0.0/app-release.apk
+
 ## Flutter Version
 
 Tested on:
