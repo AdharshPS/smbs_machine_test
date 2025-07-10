@@ -1,16 +1,28 @@
 # smbs_machine_test
 
-A new Flutter project.
+This Flutter application was developed as part of a Flutter Developer Machine Test. It includes user login functionality, product listing, and payment integration using Razorpay.
 
-## Getting Started
+## Objective
 
-This project is a starting point for a Flutter application.
+Create a Flutter application with:
+- User Login (with token storage)
+- Product Listing (via API)
+- Razorpay Payment Integration
+- Bonus features like logout, purchase history, and error handling
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1.  Clone the repository: `git clone https://github.com/AdharshPS/smbs_machine_test.git`
+2.  Navigate to the project directory: `cd smbs_machine_test`
+3.  Install dependencies: `flutter pub get`
+4.  Run the app: `flutter run`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Flutter Version
+
+Tested on:
+
+```bash
+Flutter 3.31.0-1.0.pre.184 • channel master • https://github.com/flutter/flutter.git
+Framework • revision efa81a7af6 (4 months ago) • 2025-03-21 20:38:20 -0700
+Engine • revision efa81a7af6 (4 months ago) • 2025-03-21 20:38:20 -0700
+Tools • Dart 3.8.0 (build 3.8.0-217.0.dev) • DevTools 2.45.0-dev.0
