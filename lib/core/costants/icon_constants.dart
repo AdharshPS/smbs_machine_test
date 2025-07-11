@@ -9,4 +9,6 @@ class IconConstants {
     size: 24,
   );
   static const Icon logoutIcon = Icon(Icons.logout, size: 24);
+  static const Icon listIcon = Icon(Icons.list_sharp, size: 24);
+  static const Icon orderIcon = Icon(Icons.shopping_bag_outlined, size: 24);
 }

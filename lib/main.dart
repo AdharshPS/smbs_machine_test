@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:smbs_machine_test/core/costants/color_constants.dart';
 import 'package:provider/provider.dart';
 import 'package:smbs_machine_test/features/login_screen/login_services.dart';
 import 'package:smbs_machine_test/features/product_details_screen/buy_product_service.dart';
+import 'package:smbs_machine_test/features/product_list_screen/product_details_model.dart';
 import 'package:smbs_machine_test/features/product_list_screen/product_services.dart';
 import 'package:smbs_machine_test/features/splash_screen/splash_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(ProductDetailsModelAdapter());
+  Hive.registerAdapter(RatingAdapter());
+
   runApp(
     MultiProvider(
       providers: [

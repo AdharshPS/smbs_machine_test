@@ -19,7 +19,7 @@ Create a Flutter application with:
 
 ## Download apk
 
-Apk link- https://github.com/AdharshPS/smbs_machine_test/releases/download/v1.0.0/app-release.apk
+Apk link- https://github.com/AdharshPS/smbs_machine_test/releases/download/v1.0.0%2B2/app-release.apk
 
 ## Flutter Version
 

@@ -143,13 +143,20 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
-  void handlePaymentSuccessResponse(PaymentSuccessResponse response) {
+  Future<void> handlePaymentSuccessResponse(
+    PaymentSuccessResponse response,
+  ) async {
     /*
     * Payment Success Response contains three values:
     * 1. Order ID
     * 2. Payment ID
     * 3. Signature
     * */
+    log('entered add product function');
+    await Provider.of<BuyProductService>(
+      context,
+      listen: false,
+    ).addToBoughtProducts(product: widget.product);
     final scaffoldMessenger = ScaffoldMessenger.of(context);
     showSnackBar(
       scaffoldMessenger: scaffoldMessenger,

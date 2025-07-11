@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smbs_machine_test/core/costants/color_constants.dart';
+import 'package:smbs_machine_test/features/bottom_nav_bar/bottom_nav_bar_screen.dart';
 import 'package:smbs_machine_test/features/login_screen/login_services.dart';
 import 'package:smbs_machine_test/features/product_list_screen/product_list_screen.dart';
 import 'package:smbs_machine_test/main.dart';
@@ -63,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                     navigatorKey.currentState?.pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => ProductListScreen(),
+                        builder: (context) => BottomNavBarScreen(),
                       ),
                     );
                   } else {

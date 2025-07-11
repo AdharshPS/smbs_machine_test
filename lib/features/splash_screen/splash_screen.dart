@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smbs_machine_test/core/costants/color_constants.dart';
+import 'package:smbs_machine_test/features/bottom_nav_bar/bottom_nav_bar_screen.dart';
 import 'package:smbs_machine_test/features/login_screen/login_screen.dart';
-import 'package:smbs_machine_test/features/product_list_screen/product_list_screen.dart';
 import 'package:smbs_machine_test/main.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
           MaterialPageRoute(
             builder:
                 (context) =>
-                    token == null ? LoginScreen() : ProductListScreen(),
+                    token == null ? LoginScreen() : BottomNavBarScreen(),
           ),
         ),
       );

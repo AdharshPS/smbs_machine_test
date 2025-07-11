@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smbs_machine_test/core/costants/color_constants.dart';
-import 'package:smbs_machine_test/core/costants/icon_constants.dart';
-import 'package:smbs_machine_test/features/login_screen/login_screen.dart';
 import 'package:smbs_machine_test/features/product_details_screen/product_details_screen.dart';
 import 'package:smbs_machine_test/features/product_list_screen/product_services.dart';
 import 'package:smbs_machine_test/main.dart';
@@ -30,32 +27,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Products List',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: ColorConstants.primary,
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () async {
-              final SharedPreferences prefs =
-                  await SharedPreferences.getInstance();
-              await prefs.remove('token');
-              navigatorKey.currentState?.pushAndRemoveUntil(
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-                (route) => false,
-              );
-            },
-            icon: IconConstants.logoutIcon,
-            color: ColorConstants.primary,
-          ),
-          SizedBox(width: 10),
-        ],
-      ),
       body: Consumer<ProductServices>(
         builder: (context, productProvider, child) {
           return Padding(
